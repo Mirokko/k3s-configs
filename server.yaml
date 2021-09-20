@@ -16,7 +16,7 @@ k3os:
   ntp_servers:
   - 0.us.pool.ntp.org
   - 1.us.pool.ntp.org
-  password:
+  password: rancher
   token: 72c8b7f7eac9f22bd326d6dafcae72f2b03d9a18
   labels:
     k3os.io/upgrade: enabled
