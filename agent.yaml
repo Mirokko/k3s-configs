@@ -1,0 +1,26 @@
+hostname: k3os-master
+
+k3os:
+  data_sources:
+  - aws
+  - cdrom
+  modules:
+  - kvm
+  - nvme
+  sysctl:
+    kernel.printk: "4 4 1 7"
+    kernel.kptr_restrict: "1"
+  dns_nameservers:
+  - 1.1.1.1
+  - 1.0.0.1
+  ntp_servers:
+  - 0.us.pool.ntp.org
+  - 1.us.pool.ntp.org
+  password: rancher
+  token: 72c8b7f7eac9f22bd326d6dafcae72f2b03d9a18
+  server_url: https://10.0.2.15:6443
+  labels:
+    k3os.io/upgrade: enabled
+  k3s_args:
+  - agent
+  taints: []
