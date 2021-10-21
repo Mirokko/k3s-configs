@@ -1,24 +1,11 @@
+ssh_authorized_keys:
+- ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCXHYmeYSf8eWlaTUKjOmUk6DnbdXToWNn+TZJkKR7ek4JEVLu7OgKLJO4Cf4HMc1uRJv/FPDuLR4vVpRNDgaZyQl1cTgTE2a9Cx3cxXZuGn1GKu25l6iRtyZBRFqraW7t9B9L/FYAmTOHi0obeMZW7x7WIcpf08x8f6U9/6rBbKS/dCRHBl16zbFAELQA/+uiR/I8GYNEbLM/qj458ggL2mpdT7okuFPUpEYmxdwrQrYEKIMFQenZlYLEj/g5Zt8aGobNEN+m0br2lnk70vW8+WRUlcCjmulu0+K0yM5uG2PGdKJ4BNZRL7MXTP02dVNR1dK+aHi8wZddftKHdKK61CuE1NCNYlMDtPAfVi+Klk4wRc2Oy/xnIAySmvAY+qZtAQtIcB58mAR42Fw/ljFIwBv5+R80fxReN/ZMER0uVLBfyQLv/SIwoxmQaQPX7elL83yRln32YD7GQBXdsD5E1p0ZtA04rrwE5BIvjcy8Ukn5YNcYaQdYcDb4C/3seQe50wFltzSi9u0vDJq59cO+1gjuGB/kZUIG7l+VYFZakfFfOg8kmhWlXX9LEgS9BTq83wW3Ig/XeBTejqcTx7TygPRXxxuLaDtdq12MqHa8+HAK1n1JWsISqNT5D8ub5Z/sUUX6CbQM4pogaZv0rjT16+5HFyCzm9PDvD3fmBTrOAQ== id_rsa_new
+
+
 k3os:
-  data_sources:
-  - aws
-  - cdrom
-  modules:
-  - kvm
-  - nvme
-  sysctl:
-    kernel.printk: "4 4 1 7"
-    kernel.kptr_restrict: "1"
-  dns_nameservers:
-  - 1.1.1.1
-  - 1.0.0.1
-  ntp_servers:
-  - 0.us.pool.ntp.org
-  - 1.us.pool.ntp.org
+
   password: rancher
   token: 72c8b7f7eac9f22bd326d6dafcae72f2b03d9a18
-  server_url: https://10.0.2.15:6443
-  labels:
-    k3os.io/upgrade: enabled
+  server_url: https://10.10.15.46:6443
   k3s_args:
   - agent
-  taints: []
